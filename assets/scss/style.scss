@@ -20,10 +20,14 @@ body {
 }
 
 header {
-    height: 8vw;
+    height: 6.5vw;
     align-items: center;
     display: flex;
     background-color:#1c2532;
+    .header {
+        display: flex;
+        align-items: center;
+   
     .nav {
         color: white;
         margin: auto;
@@ -35,7 +39,7 @@ header {
     }
     a {
         text-decoration: none;
-        font-size: 2.2vw;
+        font-size:1.7vw;
         color: white;
         font-family: 'Play-Regular', sans-serif;
         transition: .3s all;
@@ -46,9 +50,10 @@ header {
     }
     .logo {
         font-size: 3vw;
-        font-family: 'Play-Bold', sans-serif;
-        margin-left: 2%;
+        font-family: 'Play-Regular', sans-serif;
+        margin-left: 4%;
     }
+}
 }
 
 .grupo-1 {
@@ -83,7 +88,14 @@ header {
 }
 
 .grupo-2 {
-    height: 40vw;
+    height: 50vw;
+    h1 {
+        margin-top: 4vw;
+        text-align: center;
+        font-family: 'Play-Regular', sans-serif;
+        font-weight: 100;
+        font-size: 3.22vw;
+    }
     .serv {
         height: 100%;
         .info {
@@ -133,6 +145,7 @@ header {
 .grupo-3 {
     background-color: #f6f6f6;
     height: 62vw;
+    .tota {
     .tec {
         text-align: center;
         font-family: sans-serif;
@@ -176,6 +189,7 @@ header {
         }
     }
 }
+}
 footer {
     background-image: url('../img/elm.webp');
     height: 42vw;
@@ -188,6 +202,8 @@ footer {
         .rede {
             height: auto;
             width: 19%;
+            display: flex;
+            align-items: center;
             a {
                 text-decoration: none;
                 color: #2b2520;
@@ -207,6 +223,15 @@ footer {
                     margin-right: 1vw;
                 }
             }
+            img {
+                width: 3.2vw;
+                height: 3.2vw;
+                margin-right: 1vw;
+            }
+            p {
+                font-size: 1.6vw;
+                color: #2b2520;
+            }
         }
     }
     .corp {
@@ -224,11 +249,11 @@ footer {
         font-size: 40px!important;
     }
     header a{
-        font-size: 26px!important;
+        font-size: 24px!important;
     }
     .info p {
         font-size: 22px!important;
-        margin: 100 auto!important;
+        margin: 85px auto 100 auto !important;
     }
     .esp h5 {
         font-size: 28px!important;
@@ -237,19 +262,17 @@ footer {
         font-size: 16px!important;
     }
     header {
-        height: 110px!important;
+        height: 90px!important;
     }
     .slick-next:before, .slick-prev:before {
         font-size: 49px!important;
     }
-    .tec h1 {
-        font-size: 48px!important;
-    }
-    .tec p {
-        font-size: 16px!important;
-    }
     .grupo-2 {
         height: 550px;
+        h1 {
+            margin-top: 54px;
+            font-size: 44px;
+        }
     }
     .coi {
         h5 {
@@ -265,11 +288,20 @@ footer {
     .grupo-3 {
         height: 835px;
         .desc {
-            margin-top: 100px;
+            margin-top: 100px!important;
             .dir {
                 .coi {
-                    margin-top: 40px;
+                    margin-top: 40px!important;
                 }
+            }
+        }
+        .tec {
+            h1 {
+                padding-top: 81px!important;
+                font-size: 48px!important;
+            }
+            p {
+                font-size: 16px!important;
             }
         }
     }
@@ -287,6 +319,9 @@ footer {
                         margin-right: 13px;
                     }
                 }
+                p {
+                    font-size: 22px;
+                }
             }
         }
         .corp {
@@ -296,4 +331,10 @@ footer {
             }
         }
     }
+}
+
+@media only screen and (max-width: 500px) {
+        .nav {
+            display: none;
+        }
 }
