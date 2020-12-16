@@ -5,6 +5,14 @@ $('.slider').slick({
   autoplay: true,
   autoplaySpeed: 1800,
   arrows: true,
+  responsive: [
+    {
+      breakpoint: 415,
+      settings: {
+        arrows: false,
+      }
+    }
+  ]
 });
 
 $('a[href^="#"]').on('click', function (event) {
@@ -14,7 +22,7 @@ $('a[href^="#"]').on('click', function (event) {
   if (target.length) {
     event.preventDefault();
     $('html, body').animate({
-      scrollTop: target.offset().top
+      scrollTop: target.offset().top - 50
     }, 500);
   }
 
