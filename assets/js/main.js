@@ -27,3 +27,21 @@ $('a[href^="#"]').on('click', function (event) {
   }
 
 });
+
+$('input:checkbox').change(function () {
+  if ($(this).is(":checked")) {
+    $('.lat').addClass("show");
+  } else {
+    $('.lat').removeClass("show");
+  }
+});
+
+$(".anc").click(function () {
+  $(".lat").removeClass("show");
+  $('#chec').prop('checked', false);
+});
+
+$(".overlay").click(function () {
+  $(".lat").removeClass("show");
+  $('#chec').prop('checked', false);
+});

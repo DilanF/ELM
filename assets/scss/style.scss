@@ -47,8 +47,7 @@ header {
 }
 }
 .menu {
-    position: absolute;
-    right: 0px;
+    margin-left: auto;
     width: 41%;
     z-index: 1;
     transition: linear 2s;
@@ -87,9 +86,10 @@ header {
     width: 61vw;
     height: 1000px;
     position: absolute;
-    right: -100px;
-    display: none ;
+    right: -300px;
     top: -29px;
+    transition: .5s;
+    display: none;
     ul {
         position: absolute;
         top: 25vw;
@@ -106,11 +106,16 @@ header {
         }
     }
 }
-input[type="checkbox"]:checked ~ .lat {
-    transform: translateX(-100px);
-    display: block!important;
-    
+
+.show {
+    transition: .5s;
+    right: 0;
 }
+ 
+input[type="checkbox"]:checked ~ .overlay{
+    display: block!important;
+}
+
 input[type="checkbox"]:checked ~ label li {
     transition: .5s;
     &:nth-child(1) {
@@ -347,6 +352,18 @@ footer {
     }
 }
 
+.overlay {
+    background-color: #000;
+    opacity: 0.5;
+    width: 100%;
+    position: absolute;
+    height: 4377px;
+    display: none;
+    top: 0;
+    z-index: -1;
+    right: 0;
+}
+
 @media only screen and (min-width: 1360px) {
     .logo {
         font-size: 40px!important;
@@ -462,11 +479,13 @@ footer {
 
 @media only screen and (max-width: 415px) {
         .menu {
+            width: 17%;
             .nav {
                 display: none;
             }
             label { 
                 display: block;
+                top: 4vw;
             }
         }
         header {
@@ -518,6 +537,9 @@ footer {
                     }
                 }
             }
+        }
+        .lat {
+            display: block;
         }
         .web {
             height: 83vw;
